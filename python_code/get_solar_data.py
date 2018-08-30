@@ -84,6 +84,7 @@ def get_hmi_image_sunpy(t,size,c_over=None):
     try:
         imap = sunpy.map.Map(url)
         img  = imap.data
+        length   = imap.meta['NAXIS1']
         
         if c_over==None:
             ##nan値処理
