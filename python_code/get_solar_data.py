@@ -97,7 +97,7 @@ def get_hmi_image_sunpy(t,size,c_over=None):
             ##nan値処理
             img = np.where(np.isnan(img),0.0,img)
             
-        return imap
+        return img
     
     except:
         return np.zeros((size,size),dtype=float)
